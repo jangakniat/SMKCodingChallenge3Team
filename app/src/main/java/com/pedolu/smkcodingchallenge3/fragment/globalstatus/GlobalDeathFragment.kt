@@ -6,16 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pedolu.smkcodingchallenge3.R
 import com.pedolu.smkcodingchallenge3.adapter.GlobalStatusAdapter
+import com.pedolu.smkcodingchallenge3.adapter.StatusRoomAdapter
 import com.pedolu.smkcodingchallenge3.data.httpClient
 import com.pedolu.smkcodingchallenge3.data.mathdroidApiRequest
 import com.pedolu.smkcodingchallenge3.data.model.global.GlobalStatusSummaryItem
+import com.pedolu.smkcodingchallenge3.data.model.room.StatusSummaryModel
 import com.pedolu.smkcodingchallenge3.data.service.CovidMathdroidService
 import com.pedolu.smkcodingchallenge3.util.dismissLoading
 import com.pedolu.smkcodingchallenge3.util.showLoading
 import com.pedolu.smkcodingchallenge3.util.tampilToast
+import com.pedolu.smkcodingchallenge3.viewmodel.StatusSummaryViewModel
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_global_status_summary.*
 import retrofit2.Call
@@ -24,6 +29,8 @@ import retrofit2.Response
 
 
 class GlobalDeathFragment : Fragment() {
+    private val statusSummaryViewModel by viewModels<StatusSummaryViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +41,7 @@ class GlobalDeathFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        callGlobalDeathSummary()
+        retriveRoomStatusSummary()
 
         swipeRefreshLayout.setOnRefreshListener {
             callGlobalDeathSummary()
@@ -42,6 +49,27 @@ class GlobalDeathFragment : Fragment() {
 
     }
 
+    private fun retriveRoomStatusSummary() {
+        statusSummaryViewModel.init(requireContext(), "death")
+        statusSummaryViewModel.statusSummary.observe(
+            viewLifecycleOwner,
+            Observer { statusSummary ->
+                if (statusSummary != null) {
+                    listGlobalStatus.layoutManager = LinearLayoutManager(context)
+                    listGlobalStatus.adapter =
+                        StatusRoomAdapter(
+                            requireContext(),
+                            statusSummary,
+                            "death"
+                        ) {
+                            val country = it
+                            tampilToast(requireContext(), country.combined_key)
+                        }
+                } else {
+                    callGlobalDeathSummary()
+                }
+            })
+    }
 
     private fun callGlobalDeathSummary() {
         showLoading(requireContext(), swipeRefreshLayout)
@@ -65,8 +93,19 @@ class GlobalDeathFragment : Fragment() {
                 when {
                     response.isSuccessful -> {
                         when {
-                            response.body()?.size != 0 ->
+                            response.body()?.size != 0 -> {
+                                statusSummaryViewModel.init(requireContext(), "death")
+                                val statusList: MutableList<StatusSummaryModel> = ArrayList()
+                                for (status in response.body()!!) {
+                                    statusList.add(
+                                        StatusSummaryModel(
+                                            status.deaths, "death", status.combinedKey
+                                        )
+                                    )
+                                }
+                                statusSummaryViewModel.addAllData(statusList)
                                 showGlobalDeathSummary(response.body()!!)
+                            }
                             else -> {
                                 tampilToast(requireContext(), "Berhasil")
                             }

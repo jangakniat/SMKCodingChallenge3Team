@@ -22,7 +22,7 @@ class IndonesiaSummaryViewModel : ViewModel() {
         indonesiaSummary = repository.indonesiaSummary
     }
 
-    fun addData(indonesiaSummary: List<IndonesiaSummaryModel>) =
+    fun addAllData(indonesiaSummary: List<IndonesiaSummaryModel>) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.insertAll(indonesiaSummary)
         }

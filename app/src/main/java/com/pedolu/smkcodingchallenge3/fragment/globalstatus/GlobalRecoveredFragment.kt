@@ -6,16 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pedolu.smkcodingchallenge3.R
 import com.pedolu.smkcodingchallenge3.adapter.GlobalStatusAdapter
+import com.pedolu.smkcodingchallenge3.adapter.StatusRoomAdapter
 import com.pedolu.smkcodingchallenge3.data.httpClient
 import com.pedolu.smkcodingchallenge3.data.mathdroidApiRequest
 import com.pedolu.smkcodingchallenge3.data.model.global.GlobalStatusSummaryItem
+import com.pedolu.smkcodingchallenge3.data.model.room.StatusSummaryModel
 import com.pedolu.smkcodingchallenge3.data.service.CovidMathdroidService
 import com.pedolu.smkcodingchallenge3.util.dismissLoading
 import com.pedolu.smkcodingchallenge3.util.showLoading
 import com.pedolu.smkcodingchallenge3.util.tampilToast
+import com.pedolu.smkcodingchallenge3.viewmodel.StatusSummaryViewModel
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_global_status_summary.*
 import retrofit2.Call
@@ -23,6 +28,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class GlobalRecoveredFragment : Fragment() {
+    private val statusSummaryViewModel by viewModels<StatusSummaryViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,13 +40,34 @@ class GlobalRecoveredFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        callGlobalRecoveredSummary()
+        retriveRoomStatusSummary()
         swipeRefreshLayout.setOnRefreshListener {
             callGlobalRecoveredSummary()
         }
 
     }
 
+    private fun retriveRoomStatusSummary() {
+        statusSummaryViewModel.init(requireContext(), "recovered")
+        statusSummaryViewModel.statusSummary.observe(
+            viewLifecycleOwner,
+            Observer { statusSummary ->
+                if (statusSummary != null) {
+                    listGlobalStatus.layoutManager = LinearLayoutManager(context)
+                    listGlobalStatus.adapter =
+                        StatusRoomAdapter(
+                            requireContext(),
+                            statusSummary,
+                            "recovered"
+                        ) {
+                            val country = it
+                            tampilToast(requireContext(), country.combined_key)
+                        }
+                } else {
+                    callGlobalRecoveredSummary()
+                }
+            })
+    }
 
     private fun callGlobalRecoveredSummary() {
         setInvisible()
@@ -63,8 +91,19 @@ class GlobalRecoveredFragment : Fragment() {
                 when {
                     response.isSuccessful -> {
                         when {
-                            response.body()?.size != 0 ->
+                            response.body()?.size != 0 -> {
+                                statusSummaryViewModel.init(requireContext(), "recovered")
+                                val statusList: MutableList<StatusSummaryModel> = ArrayList()
+                                for (status in response.body()!!) {
+                                    statusList.add(
+                                        StatusSummaryModel(
+                                            status.recovered, "recovered", status.combinedKey
+                                        )
+                                    )
+                                }
+                                statusSummaryViewModel.addAllData(statusList)
                                 showGlobalRecoveredSummary(response.body()!!)
+                            }
                             else -> {
                                 tampilToast(requireContext(), "Berhasil")
                             }

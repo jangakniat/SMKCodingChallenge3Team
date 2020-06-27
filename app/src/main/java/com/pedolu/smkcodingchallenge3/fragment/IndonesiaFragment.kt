@@ -31,7 +31,6 @@ import retrofit2.Response
 
 class IndonesiaFragment : Fragment() {
     private val indonesiaSummaryViewModel by viewModels<IndonesiaSummaryViewModel>()
-    private var indonesiaSummaryItem: ArrayList<String> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -96,7 +95,6 @@ class IndonesiaFragment : Fragment() {
                                 indonesiaSummaryViewModel.init(requireContext())
                                 val provinsiList: MutableList<IndonesiaSummaryModel> = ArrayList()
                                 for (provinsi in response.body()!!) {
-                                    indonesiaSummaryItem.add(provinsi.attributes.provinsi)
                                     provinsiList.add(
                                         IndonesiaSummaryModel(
                                             provinsi.attributes.kasusPosi.toString(),
@@ -106,7 +104,7 @@ class IndonesiaFragment : Fragment() {
                                         )
                                     )
                                 }
-                                indonesiaSummaryViewModel.addData(provinsiList)
+                                indonesiaSummaryViewModel.addAllData(provinsiList)
                                 showIndonesiaSummary(response.body()!!)
                             }
                             else -> {

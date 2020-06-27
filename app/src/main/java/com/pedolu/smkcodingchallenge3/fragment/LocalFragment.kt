@@ -52,6 +52,7 @@ class LocalFragment : Fragment() {
     private lateinit var confirmed: String
     private lateinit var recovered: String
     private lateinit var deaths: String
+    private var countryList: MutableList<CountriesModel> = ArrayList()
     private var countriesItem: ArrayList<String> = ArrayList()
     private val localSummaryViewModel by viewModels<LocalSummaryViewModel>()
     private val countriesViewModel by viewModels<CountriesViewModel>()
@@ -66,7 +67,6 @@ class LocalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         retrieveRoomCountries()
-        callCountries()
         swipeRefreshLayout.setOnRefreshListener {
             callCountrySummary(countrySpinner.selectedItem.toString())
             showLocalSummary()
@@ -82,13 +82,14 @@ class LocalFragment : Fragment() {
                 }
                 setCountrySpinner()
             } else {
-                callCountrySummary(countrySpinner.selectedItem.toString())
+                callCountries()
             }
         })
 
     }
 
     private fun retrieveRoomCountrySummary(country: String) {
+
         localSummaryViewModel.init(requireContext(), country)
         localSummaryViewModel.localSummary.observe(viewLifecycleOwner, Observer { localSummary ->
             if (localSummary != null) {
@@ -97,6 +98,8 @@ class LocalFragment : Fragment() {
                 deaths = localSummary.deaths
                 setLastUpdate(localSummary.last_update)
                 showLocalSummary()
+            } else {
+                callCountrySummary(country)
             }
         })
     }
@@ -122,13 +125,10 @@ class LocalFragment : Fragment() {
                         when {
                             response.body() != null -> {
                                 countriesViewModel.init(requireContext())
-                                val countries: MutableList<CountriesModel> = ArrayList()
                                 for (country in response.body()!!.countries) {
-                                    countriesItem.add(country.name)
-                                    countries.add(CountriesModel(country.name))
                                     addCountrySummaryAsync(country.name)
                                 }
-                                countriesViewModel.addAllData(countries)
+                                countriesViewModel.addAllData(countryList)
                                 setCountrySpinner()
                             }
                             else -> {
@@ -185,6 +185,8 @@ class LocalFragment : Fragment() {
     }
 
     private fun addCountrySummaryAsync(country: String): Deferred<Int> = GlobalScope.async {
+        countriesItem.add(country)
+        countryList.add(CountriesModel(country))
         val httpClient = httpClient()
         val mathdroidApiRequest = mathdroidApiRequest<CovidMathdroidService>(httpClient)
         val call = mathdroidApiRequest.getCountry(country)
@@ -300,7 +302,7 @@ class LocalFragment : Fragment() {
                 (parent!!.getChildAt(0) as TextView).textSize = 32f
                 (parent.getChildAt(0) as TextView).gravity = Gravity.CENTER
                 retrieveRoomCountrySummary(countrySpinner.selectedItem.toString())
-
+                callCountrySummary(countrySpinner.selectedItem.toString())
             }
         }
     }
