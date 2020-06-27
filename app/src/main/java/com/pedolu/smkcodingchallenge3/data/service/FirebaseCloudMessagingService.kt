@@ -28,7 +28,6 @@ class FirebaseCloudMessagingService : FirebaseMessagingService() {
                     remoteMessage.notification!!.body.toString()
                 )
             }
-
         }
 
         remoteMessage.notification?.let {
