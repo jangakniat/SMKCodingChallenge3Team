@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "291459673162",
+    "firebase_url": "https://smkcodingchallenge3.firebaseio.com",
+    "project_id": "smkcodingchallenge3",
+    "storage_bucket": "smkcodingchallenge3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291459673162:android:86d44ec4c15294f214cab3",
+        "android_client_info": {
+          "package_name": "com.pedolu.smkcodingchallenge2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291459673162-p4bbfptrb7lpusg99cnkf8pua6qi5a7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedolu.smkcodingchallenge2",
+            "certificate_hash": "c813a788dd4228ff1fa13cff298afe4b2f8e7ccc"
+          }
+        },
+        {
+          "client_id": "291459673162-djc87un6hdm8l1dme6818o1iplgqu22c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedolu.smkcodingchallenge2",
+            "certificate_hash": "fe1f17fbb09d286b284d4d32bce2644d422ed375"
+          }
+        },
+        {
+          "client_id": "291459673162-p19ijtqj3fgo7lq3p6b4fd8pe1v9oatj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedolu.smkcodingchallenge2",
+            "certificate_hash": "e178dfadc863c188aa0c9bc770dc12b72500a010"
+          }
+        },
+        {
+          "client_id": "291459673162-21suf6r2p1h2vfq0k1suvo34bi9d3hr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IPcLWCA7SQIokEIcV3k1QixGBeVFt5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291459673162-21suf6r2p1h2vfq0k1suvo34bi9d3hr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291459673162:android:ecda3d039d8a8e8814cab3",
+        "android_client_info": {
+          "package_name": "com.pedolu.smkcodingchallenge3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291459673162-d07fn5h1uf4ahi0f9jrjse9afo296rct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedolu.smkcodingchallenge3",
+            "certificate_hash": "c813a788dd4228ff1fa13cff298afe4b2f8e7ccc"
+          }
+        },
+        {
+          "client_id": "291459673162-21suf6r2p1h2vfq0k1suvo34bi9d3hr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IPcLWCA7SQIokEIcV3k1QixGBeVFt5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291459673162-21suf6r2p1h2vfq0k1suvo34bi9d3hr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
