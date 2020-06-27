@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(i)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 
 }

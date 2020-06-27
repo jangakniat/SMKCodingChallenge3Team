@@ -99,7 +99,7 @@ class GlobalDeathFragment : Fragment() {
                                 for (status in response.body()!!) {
                                     statusList.add(
                                         StatusSummaryModel(
-                                            status.deaths, "death", status.combinedKey
+                                            status.deaths, "death", status.combinedKey + "death"
                                         )
                                     )
                                 }

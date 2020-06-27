@@ -28,12 +28,18 @@ class FirebaseCloudMessagingService : FirebaseMessagingService() {
                     remoteMessage.notification!!.body.toString()
                 )
             }
+
         }
 
         remoteMessage.notification?.let {
+            sendNotification(
+                remoteMessage.notification!!.title.toString(),
+                remoteMessage.notification!!.body.toString()
+            )
             Log.d(TAG, "Message Notification Body: ${it.body}")
         }
     }
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onNewToken(token: String) {

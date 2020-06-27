@@ -164,6 +164,7 @@ class ProfileActivity : AppCompatActivity() {
         intent.putExtra("telp", telp)
         intent.putExtra("address", address)
         startActivityForResult(intent, REQUEST_CODE)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 
     private fun logoutUser() {
@@ -174,6 +175,7 @@ class ProfileActivity : AppCompatActivity() {
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(i)
+                overridePendingTransition(R.anim.fragment_fade_enter, R.anim.fragment_fade_exit)
                 finish()
             }
 
@@ -181,6 +183,7 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         return true
     }
 

@@ -97,7 +97,9 @@ class GlobalRecoveredFragment : Fragment() {
                                 for (status in response.body()!!) {
                                     statusList.add(
                                         StatusSummaryModel(
-                                            status.recovered, "recovered", status.combinedKey
+                                            status.recovered,
+                                            "recovered",
+                                            status.combinedKey + "recovered"
                                         )
                                     )
                                 }

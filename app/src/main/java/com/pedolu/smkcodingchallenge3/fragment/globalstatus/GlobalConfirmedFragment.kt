@@ -97,7 +97,9 @@ class GlobalConfirmedFragment : Fragment() {
                                 for (status in response.body()!!) {
                                     statusList.add(
                                         StatusSummaryModel(
-                                            status.confirmed, "confirmed", status.combinedKey
+                                            status.confirmed,
+                                            "confirmed",
+                                            status.combinedKey + "confirmed"
                                         )
                                     )
                                 }
