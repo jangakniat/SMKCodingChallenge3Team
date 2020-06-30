@@ -68,6 +68,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "291459673162-5c8hs1fsoe5r8ueuku2r1tn8n25ob9uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedolu.smkcodingchallenge3",
+            "certificate_hash": "d7107132fd10b3b4ab0c593ab28a8bed2a33663b"
+          }
+        },
+        {
           "client_id": "291459673162-d07fn5h1uf4ahi0f9jrjse9afo296rct.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

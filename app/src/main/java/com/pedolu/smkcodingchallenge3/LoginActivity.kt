@@ -80,10 +80,11 @@ class LoginActivity : AppCompatActivity() {
         val uid = auth.currentUser!!.uid
         val User = UserModel(
             user!!.displayName.toString(),
-            user.email.toString(),
             "",
             "",
+            user.phoneNumber.toString(),
             "",
+            user.photoUrl.toString(),
             uid
         )
         ref.child(uid).child("Data").setValue(User).addOnCompleteListener { task ->

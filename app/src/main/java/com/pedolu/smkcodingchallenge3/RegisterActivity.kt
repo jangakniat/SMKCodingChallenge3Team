@@ -99,6 +99,7 @@ class RegisterActivity : AppCompatActivity() {
             "",
             "",
             "",
+            "",
             uid
         )
         ref.child("Users").child(uid).child("Data").setValue(User)

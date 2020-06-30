@@ -10,7 +10,8 @@ data class UserModel(
     var age: String,
     var telp: String,
     var address: String,
+    var image:String,
     @PrimaryKey var key: String
 ) {
-    constructor() : this("", "", "", "", "", "")
+    constructor() : this("", "", "", "", "", "","")
 }

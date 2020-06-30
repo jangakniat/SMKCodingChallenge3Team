@@ -1,4 +1,4 @@
-# SMKCodingChallenge2
+key# SMKCodingChallenge2
 ## Deskripsi
    Pada Challenge ini, saya membuat aplikasi sederhana untuk menampilkan informasi terkait corona.
 ## Teknologi yang digunakan :

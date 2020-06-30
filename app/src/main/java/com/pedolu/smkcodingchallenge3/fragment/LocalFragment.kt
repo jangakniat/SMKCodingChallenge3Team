@@ -80,8 +80,12 @@ class LocalFragment : Fragment() {
                 for (country in countries) {
                     countriesItem.add(country.name)
                 }
+                if(countriesItem.isEmpty()){
+                    callCountries()
+                }
                 setCountrySpinner()
             } else {
+                Log.i("countries","onok")
                 callCountries()
             }
         })
@@ -89,7 +93,6 @@ class LocalFragment : Fragment() {
     }
 
     private fun retrieveRoomCountrySummary(country: String) {
-
         localSummaryViewModel.init(requireContext(), country)
         localSummaryViewModel.localSummary.observe(viewLifecycleOwner, Observer { localSummary ->
             if (localSummary != null) {
