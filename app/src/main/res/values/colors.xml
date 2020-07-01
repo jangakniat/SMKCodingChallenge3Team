@@ -3,7 +3,13 @@
     <color name="colorPrimary">#2c3e50</color>
     <color name="colorPrimaryDark">#34495e</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorChineseWhite">#ffffff</color>
     <color name="colorAccent">#535AF6</color>
+    <color name="colorNephritis">#27ae60</color>
+    <color name="colorEmerald">#2ecc71</color>
+    <color name="colorGreenSea">#16a085</color>
+    <color name="colorTurquouise">#1abc9c</color>
+    <color name="colorLightGreen">#90F2D8</color>
     <color name="colorRed">#e57373</color>
     <color name="colorGreen">#81c784</color>
     <color name="colorYellow">#fff176</color>
