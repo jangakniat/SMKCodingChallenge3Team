@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 tab.icon!!.setColorFilter(
-                    ContextCompat.getColor(applicationContext, R.color.colorWhite),
+                    ContextCompat.getColor(applicationContext, R.color.colorPrimary),
                     PorterDuff.Mode.SRC_IN
                 )
             }

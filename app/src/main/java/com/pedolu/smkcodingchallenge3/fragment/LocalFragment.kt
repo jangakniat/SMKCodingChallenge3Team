@@ -257,7 +257,7 @@ class LocalFragment : Fragment() {
             setHoleColor(
                 ContextCompat.getColor(
                     requireContext(),
-                    R.color.colorPrimary
+                    R.color.colorWhite
                 )
             )
             invalidate()
@@ -288,7 +288,7 @@ class LocalFragment : Fragment() {
         )
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
         countrySpinner.background.setColorFilter(
-            ContextCompat.getColor(requireContext(), R.color.colorWhite),
+            ContextCompat.getColor(requireContext(), R.color.colorPrimary),
             PorterDuff.Mode.SRC_ATOP
         )
         countrySpinner.adapter = adapter

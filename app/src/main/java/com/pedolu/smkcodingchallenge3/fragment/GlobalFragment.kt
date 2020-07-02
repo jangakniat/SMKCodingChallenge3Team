@@ -190,7 +190,7 @@ class GlobalFragment : Fragment() {
             setHoleColor(
                 ContextCompat.getColor(
                     requireContext(),
-                    R.color.colorPrimary
+                    R.color.colorWhite
                 )
             )
             invalidate()
