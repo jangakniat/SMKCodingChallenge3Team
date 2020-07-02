@@ -5,7 +5,7 @@
     android:layout_height="80dp"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="4dp"
-    android:backgroundTint="@color/colorPrimary"
+    android:backgroundTint="@color/colorWhite"
     app:cardCornerRadius="8dp">
 
     <RelativeLayout
@@ -21,6 +21,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:text="Provinsi"
+            android:textColor="@color/colorPrimaryDark"
             android:textAlignment="center"
             android:textSize="20sp" />
 

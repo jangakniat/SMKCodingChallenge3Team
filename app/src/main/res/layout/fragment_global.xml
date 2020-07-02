@@ -30,7 +30,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 android:elevation="16dp"
                 app:cardCornerRadius="16dp">
 
@@ -45,7 +45,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="16dp"
                         android:text="Global"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="32sp" />
 
                     <TextView
@@ -55,7 +55,7 @@
                         android:layout_below="@id/txtGlobal"
                         android:layout_centerHorizontal="true"
                         android:text="0000-00-00 00:00:00"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp" />
 
                     <com.github.mikephil.charting.charts.PieChart
@@ -74,7 +74,7 @@
                 android:layout_below="@id/graphCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -88,7 +88,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView
@@ -111,7 +111,7 @@
                 android:layout_below="@id/confirmedCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -125,7 +125,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView
@@ -148,7 +148,7 @@
                 android:layout_below="@id/recoveredCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -162,7 +162,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView

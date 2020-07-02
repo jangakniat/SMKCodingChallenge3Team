@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorChineseWhite"
     android:gravity="bottom"
     android:orientation="vertical"
     tools:context=".LoginActivity">
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:text="Register"
+        android:textColor="@color/colorPrimaryDark"
         android:textAlignment="center"
         android:textSize="32sp" />
 
@@ -26,33 +27,36 @@
             android:id="@+id/inpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimary"
             android:hint="Name"
             android:inputType="text"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_margin="10dp"/>
 
         <EditText
             android:id="@+id/inpEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/inpName"
-            android:backgroundTint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimary"
             android:hint="Email"
             android:inputType="text"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_margin="10dp"/>
 
         <EditText
             android:id="@+id/inpPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/inpEmail"
-            android:backgroundTint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimary"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/btnRegister"
@@ -61,7 +65,8 @@
             android:layout_below="@id/inpPassword"
             android:layout_marginTop="16dp"
             android:background="@color/colorAccent"
-            android:text="Register" />
+            android:text="Register"
+            android:layout_margin="10dp" />
     </RelativeLayout>
 
     <Button

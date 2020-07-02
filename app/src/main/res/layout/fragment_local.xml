@@ -30,7 +30,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 android:elevation="16dp"
                 app:cardCornerRadius="16dp">
 
@@ -46,12 +46,12 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginHorizontal="24dp"
                         android:layout_marginTop="16dp"
-                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:backgroundTint="@color/colorPrimary"
                         android:dropDownWidth="match_parent"
-                        android:dropDownSelector="@color/colorWhite"
+                        android:dropDownSelector="@color/colorPrimary"
                         android:foregroundGravity="center"
                         android:gravity="center"
-                        android:popupBackground="@color/colorPrimaryDark"
+                        android:popupBackground="@color/colorPrimary"
                         android:textAlignment="center"
                         android:textSize="32sp"
                         android:visibility="visible" />
@@ -63,7 +63,7 @@
                         android:layout_below="@id/countrySpinner"
                         android:layout_centerHorizontal="true"
                         android:text="0000-00-00 00:00:00"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp" />
 
                     <com.github.mikephil.charting.charts.PieChart
@@ -82,7 +82,7 @@
                 android:layout_below="@id/graphCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -96,7 +96,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView
@@ -119,7 +119,7 @@
                 android:layout_below="@id/confirmedCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -133,7 +133,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView
@@ -156,7 +156,7 @@
                 android:layout_below="@id/recoveredCard"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="16dp">
 
                 <RelativeLayout
@@ -170,7 +170,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"
                         android:text="@string/txtJumlah"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="24sp" />
 
                     <TextView

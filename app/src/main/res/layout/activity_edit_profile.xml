@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorWhite">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,8 +32,8 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_account"
-                app:civ_border_color="#FFF"
+                android:src="@drawable/ic_account_dark"
+                app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="2dp" />
 
             <EditText
@@ -42,10 +42,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:hint="Name"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <Spinner
                 android:id="@+id/genderSpinner"
@@ -53,46 +53,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorWhite"
                 android:dropDownWidth="match_parent"
-                android:dropDownSelector="@color/colorWhite"
+                android:dropDownSelector="@color/colorPrimaryDark"
                 android:entries="@array/gender"
                 android:popupBackground="@color/colorPrimaryDark"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/txtAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:hint="Age"
                 android:inputType="number"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/txtTelephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:hint="Telephone"
                 android:inputType="phone"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/txtAddress"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:hint="Address"
                 android:inputType="textMultiLine"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/btnSaveEdit"

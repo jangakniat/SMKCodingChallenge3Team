@@ -4,17 +4,17 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorWhite"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@android:color/white">
+        app:titleTextColor="@color/colorPrimary">
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -28,9 +28,8 @@
         android:id="@+id/tabsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabBackground="@color/colorPrimary"
-        app:tabIconTint="@color/colorWhite"
-        app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="@color/colorWhite" />
+        app:tabBackground="@color/colorWhite"
+        app:tabIconTint="@color/colorPrimaryDark"
+        app:tabTextColor="@color/colorPrimary" />
 
 </LinearLayout>
