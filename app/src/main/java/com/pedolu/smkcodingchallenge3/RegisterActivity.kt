@@ -33,6 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         ref = FirebaseDatabase.getInstance().reference
         btnLogin.setOnClickListener { goToLoginActivity() }
+        btnVolunteer.setOnClickListener { goToRegisterVolunteer() }
         btnRegister.setOnClickListener { inputValidation() }
     }
 
@@ -130,4 +131,14 @@ class RegisterActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         finish()
     }
+
+    private fun goToRegisterVolunteer() {
+        val intent = Intent(this, VolunteerRegister::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        finish()
+    }
+
 }
