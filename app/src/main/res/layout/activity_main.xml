@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="?attr/colorAccent"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@android:color/white">
@@ -29,8 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabBackground="@color/colorPrimary"
-        app:tabIconTint="@color/colorWhite"
+        app:tabIconTint="@color/colorGray"
         app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="@color/colorWhite" />
+        app:tabTextColor="@color/colorGray" />
 
 </LinearLayout>

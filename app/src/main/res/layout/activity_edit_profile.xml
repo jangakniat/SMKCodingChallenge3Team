@@ -42,10 +42,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
-                android:hint="Name"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:backgroundTint="@color/colorGray"
+                android:hint="Nama"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
 
             <Spinner
                 android:id="@+id/genderSpinner"
@@ -53,52 +53,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/colorPrimary"
                 android:dropDownWidth="match_parent"
-                android:dropDownSelector="@color/colorWhite"
+                android:dropDownSelector="@color/colorGray"
                 android:entries="@array/gender"
-                android:popupBackground="@color/colorPrimaryDark"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:popupBackground="@color/colorPrimary"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
 
             <EditText
                 android:id="@+id/txtAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
-                android:hint="Age"
+                android:backgroundTint="@color/colorGray"
+                android:hint="Usia"
                 android:inputType="number"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
 
             <EditText
                 android:id="@+id/txtTelephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
-                android:hint="Telephone"
+                android:backgroundTint="@color/colorGray"
+                android:hint="Telepon"
                 android:inputType="phone"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
 
             <EditText
                 android:id="@+id/txtAddress"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/colorWhite"
-                android:hint="Address"
+                android:backgroundTint="@color/colorGray"
+                android:hint="Alamat"
                 android:inputType="textMultiLine"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
 
             <Button
                 android:id="@+id/btnSaveEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:textColor="@color/colorPrimary"
                 android:background="@color/colorAccent"
                 android:text="Save" />
         </LinearLayout>

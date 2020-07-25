@@ -23,8 +23,18 @@
                 android:indeterminate="true"
                 android:visibility="gone" />
 
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/countrySearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textCursorDrawable="@null"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/graphCard"
+                android:layout_below="@+id/countrySearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -48,7 +58,7 @@
                         android:layout_marginTop="16dp"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:dropDownWidth="match_parent"
-                        android:dropDownSelector="@color/colorWhite"
+                        android:dropDownSelector="@color/colorGray"
                         android:foregroundGravity="center"
                         android:gravity="center"
                         android:popupBackground="@color/colorPrimaryDark"

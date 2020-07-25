@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +21,7 @@
                 app:titleTextColor="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
+                android:background="?attr/colorAccent"
                 android:fitsSystemWindows="true"
                 android:minHeight="?attr/actionBarSize" />
 
@@ -54,7 +52,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Name:"
+                        android:text="Nama :"
                         android:textSize="18sp" />
 
                     <TextView
@@ -76,7 +74,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Gender:"
+                        android:text="Kelamin : "
                         android:textSize="18sp" />
 
                     <TextView
@@ -98,7 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Age:"
+                        android:text="Usia:"
                         android:textSize="18sp" />
 
                     <TextView
@@ -120,7 +118,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Telephone:"
+                        android:text="Telepon : "
                         android:textSize="18sp" />
 
                     <TextView
@@ -142,7 +140,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Address:"
+                        android:text="Alamat :"
                         android:textSize="18sp" />
 
                     <TextView
@@ -159,24 +157,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:text="Ubah"
                     android:background="@color/colorAccent"
-                    android:text="Edit" />
+                    android:textColor="@color/colorPrimary" />
 
                 <Button
                     android:id="@+id/btnExit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:text="Keluar"
                     android:background="@color/colorRed"
-                    android:text="Exit" />
+                    android:textColor="@color/colorPrimary" />
 
-                <Button
-                    android:id="@+id/btnNotif"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/colorYellow"
-                    android:text="Notif" />
             </LinearLayout>
 
             <include layout="@layout/progress_overlay" />
