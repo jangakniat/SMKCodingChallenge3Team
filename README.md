@@ -1,6 +1,8 @@
-key# SMKCodingChallenge2
+# SMKCodingChallenge3Team
+* Adam Rafi
+* Afif Ghulam
 ## Deskripsi
-   Pada Challenge ini, saya membuat aplikasi sederhana untuk menampilkan informasi terkait corona.
+   Pada Challenge ini, kami membuat aplikasi sederhana untuk menampilkan informasi terkait corona.
 ## Teknologi yang digunakan :
 * [KawalKorona API](https://kawalcorona.com/api/)
 * [Mathdroid COVID-19 API](https://github.com/mathdroid/covid-19-api)
@@ -11,9 +13,11 @@ key# SMKCodingChallenge2
 * Room (Database, Repository, View Model)
 
 ## Gambar :
-<img src="https://user-images.githubusercontent.com/57445482/85992617-57eb1c80-ba1f-11ea-8268-01ee130049fd.png" width="300"/>
-<img src="https://user-images.githubusercontent.com/57445482/85992623-59b4e000-ba1f-11ea-865a-302c2183e07e.png" width="300"/>
-<img src="https://user-images.githubusercontent.com/57445482/85992632-5c173a00-ba1f-11ea-86b8-eb689db18962.png" width="300"/>
-<img src="https://user-images.githubusercontent.com/57445482/85992638-5d486700-ba1f-11ea-85c9-ee95c3d0b571.png" width="300"/>
-<img src="https://user-images.githubusercontent.com/57445482/85992652-5faac100-ba1f-11ea-904e-fc09ec06336e.png" width="300"/>
-<img src="https://user-images.githubusercontent.com/57445482/85992659-60dbee00-ba1f-11ea-86e4-6b1bd6450b92.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449940-38f07680-ce75-11ea-99de-06698aa19df4.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449939-37bf4980-ce75-11ea-9a5e-04cc202bcb7e.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449938-35f58600-ce75-11ea-8d30-438081f2d8d9.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449934-33932c00-ce75-11ea-883d-94fbcf78eb97.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449932-30983b80-ce75-11ea-8037-d13ce2567aa3.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449933-3261ff00-ce75-11ea-93c4-c94a039d698c.png" width="300"/>
+<img src="https://user-images.githubusercontent.com/57445482/88449937-342bc280-ce75-11ea-900c-b16052dd77ae.png" width="300"/>
+
